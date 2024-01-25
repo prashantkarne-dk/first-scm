@@ -33,12 +33,6 @@ kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.
 #to pull any updates in the branch we can use
 git pull 
 
-#To get description of the service
-kubectl describe service <servicename>
-
-#To get the details on pods
-kubectl get pod -o wide
-
 Run pods:
 kubectl run testpods --image=nginx
 
