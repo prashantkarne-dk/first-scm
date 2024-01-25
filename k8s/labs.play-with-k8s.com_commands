@@ -26,6 +26,10 @@
 
 [node1 ~]$ 
 =============================================
+ kubectl apply -f https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/nginx-app.yaml
+ 
+kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16;date;kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml;git clone https://github.com/prashantkarne-dk/first-scm.git;cd first-scm/k8s;pwd;ls -lt
+
 Run pods:
 kubectl run testpods --image=nginx
 
