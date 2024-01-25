@@ -35,3 +35,5 @@ kubectl run testpods --image=nginx
 
 Expose service to browser:
 kubectl expose pods/testpods --type=NodePort --port=80 --target-port=80
+
+/
