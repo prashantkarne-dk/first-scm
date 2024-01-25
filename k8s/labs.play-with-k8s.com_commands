@@ -30,6 +30,15 @@
  
 kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16;date;kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml;git clone https://github.com/prashantkarne-dk/first-scm.git;cd first-scm/k8s;pwd;ls -lt
 
+#to pull any updates in the branch we can use
+git pull 
+
+#To get description of the service
+kubectl describe service <servicename>
+
+#To get the details on pods
+kubectl get pod -o wide
+
 Run pods:
 kubectl run testpods --image=nginx
 
