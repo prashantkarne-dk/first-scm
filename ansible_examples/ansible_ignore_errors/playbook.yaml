@@ -1,0 +1,10 @@
+- name: Demonstrate ignore_errors in playbool
+  hosts: centos
+  tasks:
+    - name: Print a fact variable
+      ansible.builtin.debug:
+        msg: "{{ testing }}"
+      ignore_errors: true
+    - name: Display a message
+      ansible.builtin.debug:
+        msg: This task ran successfully
