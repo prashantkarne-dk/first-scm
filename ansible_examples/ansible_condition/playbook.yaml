@@ -1,0 +1,13 @@
+---
+- name: Demonstrate conditions
+  hosts: centos
+  tasks:
+    - name: Install web package
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+    - name: Create a user account
+      ansible.builtin.user:
+        name: testuser
+        state: present
+      when: ansible_facts['nodename'] == 'node1'
