@@ -5,6 +5,9 @@
       ansible.builtin.debug:
         msg: "{{ testing }}"
       ignore_errors: true
+      register: result
+      failed_when: "'The task includes an option with an undefined variable' in result.msg"
     - name: Display a message
       ansible.builtin.debug:
         msg: This task ran successfully
+
