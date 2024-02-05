@@ -1,0 +1,21 @@
+---
+- name: >
+    Create multiple user accounts and add them to groups
+  hosts: centos
+  vars:
+    list_of_users:
+      - { name: testuser1, group: "dev,wheel" }
+      - { name: testuser2, group: "dev,wheel" }
+  tasks:
+    - name: Create group
+      ansible.builtin.group:
+        name: "dev"
+        state: present
+      loop: "{{ list_of_users }}"
+    - name: Create user accounts
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        state: present
+        append: true
+        groups: "{{ item.group }}"
+      loop: "{{ list_of_users }}"
