@@ -1,0 +1,11 @@
+---
+- name: Demonstrate ansible facts
+  hosts: centos
+  tasks:
+    - name: Display all facts
+      ansible.builtin.debug:
+        var: ansible_facts
+    - name: Display hostname
+      ansible.builtin.debug:
+        msg: "The distribution for {{ inventory_hostname }} is {{ ansible_facts }}"
+

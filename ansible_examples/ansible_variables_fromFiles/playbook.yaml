@@ -1,0 +1,10 @@
+---
+- name: Refer variable from file
+  hosts: centos
+  vars_files:
+    - vars/packages.yaml
+  tasks:
+    - name: Remove packages
+      ansible.builtin.dnf:
+        name: "{{ git_package }}"
+        state: present

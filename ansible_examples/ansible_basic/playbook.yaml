@@ -1,0 +1,18 @@
+---
+- name: Demonstrate use of ansible module
+  hosts: centos
+  tasks:
+    - name: Check of python is installed in managed nodes
+      ansible.builtin.ping:
+
+    - name: Reboot all managed nodes in centos group
+      ansible.builtin.reboot:
+- name: Install packages
+  hosts: centos
+  tasks:
+    - name: Install git and java
+      ansible.builtin.dnf:
+        name:
+          - git
+          - java-17-openjdk
+        state: present

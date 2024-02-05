@@ -1,0 +1,18 @@
+---
+- name: Create folders in centos group
+  hosts: centos
+  tasks:
+    - name: Create folder
+      ansible.builtin.file:
+        path: /home/student/{{ folder_name }}
+        state: directory
+        mode: "0755"
+
+- name: Create a file in testing folder
+  hosts: centos
+  tasks:
+    - name: Create file
+      ansible.builtin.file:
+        path: /home/student/{{ folder_name }}//{{ file_name }}
+        state: touch
+        mode: "0644"
