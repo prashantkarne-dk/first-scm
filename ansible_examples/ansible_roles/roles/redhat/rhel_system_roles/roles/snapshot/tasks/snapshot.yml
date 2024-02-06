@@ -1,0 +1,6 @@
+---
+- name: Snapshot VG/LVs
+  ansible.builtin.script: "{{ __snapshot_cmd }}"
+  args:
+    executable: "{{ __snapshot_python }}"
+  register: snapshot_cmd

@@ -1,0 +1,7 @@
+---
+exclude_paths:
+  - tests/sshd/roles/
+  - roles/sshd/.tox/
+  - roles/sshd/.markdownlint.yaml
+skip_list:
+  - var-naming[no-role-prefix]

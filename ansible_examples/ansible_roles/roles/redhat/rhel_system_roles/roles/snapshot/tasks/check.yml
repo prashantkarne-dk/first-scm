@@ -1,0 +1,6 @@
+---
+- name: Check snapshots will work or are completed (verify)
+  ansible.builtin.script: "{{ __snapshot_cmd }}"
+  args:
+    executable: "{{ __snapshot_python }}"
+  register: snapshot_cmd
