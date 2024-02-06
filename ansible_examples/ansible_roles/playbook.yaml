@@ -1,0 +1,10 @@
+---
+- name: Perform timesync of servers
+  hosts: centos
+  vars:
+    timesync_ntp_servers:
+     - hostname: in.pool.ntp.org
+       inburst: true
+       pool: true
+  roles:
+    - redhat.rhel_system_roles.timesync
