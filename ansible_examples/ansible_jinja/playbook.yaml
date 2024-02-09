@@ -1,0 +1,12 @@
+---
+- name: Demonstrate template module
+  hosts: centos
+  tasks:
+    - name: create motd file
+      ansible.builtin.template:
+        src: j2/motd.j2
+        dest: /etc/motd
+    - name: create /etc/hosts file
+      ansible.builtin.template:
+        src: j2/hosts.j2
+        dest: /etc/hosts
