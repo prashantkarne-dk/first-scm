@@ -1,0 +1,19 @@
+package com.app
+
+class Condition {
+	
+	static void main(args) {
+		//TODO Auto-generated method stub
+		def num1 = 151
+		if(num1 == 150 ) {
+			println("num1 is equal to 150")
+		}
+		else if (num1 < 150)     {
+			println("num1 is less than 150")
+		}
+		else {
+			println("num11 is grrrreater than 150")
+		}
+	}
+}
+

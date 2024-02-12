@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+/home/student/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+2540607589.index
+2357105026.index
+2984099420.index
+1865797976.index
+1316055787.index
+241682911.index
