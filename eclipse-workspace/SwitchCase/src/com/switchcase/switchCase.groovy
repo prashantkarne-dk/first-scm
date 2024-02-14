@@ -3,8 +3,8 @@ package com.switchcase
 class switchCase {
 	static void main(args) {
 		
-		def fruit = "apple"
-		
+		def fruit = "orange"
+		println(20 <= 20.01)
 		switch (fruit) {
 			case "apple":
 				println("It's an apple.")
